@@ -24,8 +24,8 @@ exports.create = async (req, res) => {
 
 exports.login = async (req, res) => {
   try {
-    const { username, password } = req.body;
-    const user = await User.findOne({ where: { username } });
+    const { userId, password } = req.body;
+    const user  = await User.findOne({ _id: userId });
     if (!user) {
       return res
         .status(401)
@@ -36,8 +36,7 @@ exports.login = async (req, res) => {
 
     if (!isValid) {
       return res
-        .status(401)
-        .json({ message: "Utilisateur ou mot de passe incorrect" });
+        .status(401).json({ message: "Utilisateur ou mot de passe incorrect" });
     }
 
     const token = jwt.sign({ userId: user.id }, "RANDOM_TOKEN_SECRET", {

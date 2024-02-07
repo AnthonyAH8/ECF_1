@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/UserRoutes');
+const projectRoutes = require('./routes/projectRoutes');
+const taskRoutes = require('./routes/tasksRoutes');
 const app = express();
 const port = 3000;
 const db = mongoose.connection
@@ -19,4 +21,4 @@ app.listen(port, () => {
     console.log(`Port : ${port}`);
   })
 
-app.use(express.json()).use("/api/users", userRoutes);
+app.use(express.json()).use("/api", userRoutes, projectRoutes, taskRoutes);
