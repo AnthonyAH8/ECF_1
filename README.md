@@ -24,7 +24,17 @@
 
 ## Processus
 
+### Préparation Projet 
+
 Pour débuter le projet et bien le comprendre, il faut tout d'abord commencer par effectuer différents diagrammes:
 
         1. Diagramme de cas d'utilisation
         2. Diagramme de classe
+
+### Initialisation projet
+
+1. **Installation des dépendances**
+
+- `npm init`: Initialise le projet.
+- `npm install express`: Installe express dans le projet.
+- `npm install mongoose`: Installe mongoose dans le projet.
