@@ -1,5 +1,7 @@
 <script>
 
+import { RouterLink } from 'vue-router';
+
     export default {
         data() {
             return {
@@ -19,14 +21,16 @@
 </script>
 
 <template>
-    <form @submit.prevent="submitLogin" class="inscription">
+    <form @submit.prevent="submitLogin" class="login">
         <label for="username">Pseudo :</label>
-        <input type="text" id="username" v-model="loginData.username">
+        <input type="text" id="username" v-model="loginData.username" placeholder="Entrez votre nom d'utilisateur">
 
         <label for="password">Mot de passe:</label>
-        <input type="password" id="password" v-model="loginData.password">
+        <input type="password" id="password" v-model="loginData.password" placeholder="Entrez votre mot de passe">
 
         <button type="submit">Se connecter</button>
+        
+        <RouterLink to="register" class="redirection">Pas encore inscrit? Création d'un compte</RouterLink>
     </form>
 
     <div v-if="submitted">
@@ -35,7 +39,7 @@
 </template>
 
 <style>
-    .inscription {
+    .login {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -53,7 +57,7 @@
     }
 
     button{
-        margin-top: 20px;
+        margin: 20px;
     }
 }
 
@@ -63,4 +67,5 @@ p{
     font-size: 1.5em;
 
 }
+
 </style>

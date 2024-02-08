@@ -8,10 +8,10 @@ import { RouterLink } from 'vue-router';
 
 <template>
 <nav class="navbar">
-    <RouterLink to="/users">Accueil</RouterLink>
-    <RouterLink to="/projects">Projets</RouterLink>
-    <RouterLink to="/tasks">Tâches</RouterLink>
-    <RouterLink to="/register">S'inscrire</RouterLink>
+    <!-- <RouterLink to="users">Accueil</RouterLink>
+    <RouterLink to="projects">Projets</RouterLink>
+    <RouterLink to="tasks">Tâches</RouterLink>
+     -->
 </nav>
 </template>
 

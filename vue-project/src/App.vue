@@ -3,13 +3,13 @@ import { ref } from 'vue';
 import Navbar from './components/Navbar.vue';
 import Form from './components/Form.vue';
 import Login from './components/Login.vue';
-let users = ref([]);
+// let users = ref([]);
 
 export default {
   components: {
     Navbar,
     Form,
-    Login
+    Login,
 },
 };
 
