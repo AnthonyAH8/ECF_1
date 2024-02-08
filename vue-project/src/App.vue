@@ -2,23 +2,27 @@
 import { ref } from 'vue';
 import Navbar from './components/Navbar.vue';
 import Form from './components/Form.vue';
+import Login from './components/Login.vue';
 let users = ref([]);
 
 export default {
   components: {
     Navbar,
     Form,
-  },
+    Login
+},
 };
 
 </script>
   
 <template>
-  <h1>Gestion de projet</h1>
+  <div>
+    <h1>Gestion de projet</h1>
+  </div>
   <div id="app">
     <Navbar />
-    <Form />
-    <router-view/>
+    <!-- <Form /> -->
+    <Login/>
   </div>
 </template>
 

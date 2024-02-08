@@ -1,4 +1,5 @@
 <script>
+
 export default {
     data() {
         return {
@@ -23,51 +24,56 @@ export default {
 <template>
     <form @submit.prevent="submitForm" class="inscription">
         <label for="firstname">Prénom:</label>
-        <input type="text" id="firstname" v-model="formData.firstname" />
+        <input type="text" id="firstname" name="firstname" v-model="formData.firstname" />
 
         <label for="lastname">Nom de famille:</label>
-        <input type="text" id="lastname" v-model="formData.lastname" />
+        <input type="text" id="lastname" name="lastname" v-model="formData.lastname" />
 
         <label for="username">Pseudo:</label>
-        <input type="text" id="username" v-model="formData.username" />
+        <input type="text" id="username" name="username" v-model="formData.username" />
 
         <label for="email">Mail:</label>
-        <input type="email" id="email" v-model="formData.email" />
+        <input type="email" id="email" name="email" v-model="formData.email" />
 
         <label for="password">Mot de passe:</label>
-        <input type="password" id="password" v-model="formData.password" />
+        <input type="password" id="password" name="password" v-model="formData.password" />
 
         <button type="submit">S'inscrire</button>
-
     </form>
 
     <div v-if="submitted">
-        <p>Bienvenue {{ formData.username }}</p>
+        <p>Bienvenue {{ formData.username.toUpperCase() }}</p>
     </div>
 </template>
 
 <style>
-
-html, body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .inscription {
     margin: 20px;
     padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.147);
     border-radius: 10px;
     display: flex;
+    background-color: #2c3e5018;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #d6d6d6b5;
     gap: 5px;
 
-    & input{
-        outline: #d6d6d6b5;
+    & input[type=text]:focus {
+        border: 1px solid #2c3e50;
+        outline: none;
+        color: #1d6996;
     }
+
+    button {
+        margin-top: 20px;
+    }
+}
+
+p {
+    text-align: center;
+    color: #1d6996;
+    font-size: 1.5em;
+
 }
 
 /* A finir */
