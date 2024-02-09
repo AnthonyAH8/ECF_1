@@ -22,6 +22,10 @@
 - Express.js
 - Node.js
 
+3. **Base de données**
+
+- Mongoose (NoSQL)
+
 ## Processus
 
 ### Préparation Projet 
@@ -38,3 +42,13 @@ Pour débuter le projet et bien le comprendre, il faut tout d'abord commencer pa
 - `npm init`: Initialise le projet.
 - `npm install express`: Installe express dans le projet.
 - `npm install mongoose`: Installe mongoose dans le projet.
+
+2. **Création base de données Mongoose**
+
+Connexion à la base de données :`mongodb://localhost:27017`
+
+3. **Création du projet Vue**
+
+- `npm create vue@latest` : Initialisation du projet Vue.js.
+- `npm install`: Installer les dépendances Vue.
+- `npm install bootstrap`: Installer Boostrap dans le projet.

@@ -1,23 +1,23 @@
 <script>
-
+import { defineComponent } from 'vue'; // Import defineComponent
 import { RouterLink } from 'vue-router';
 
-    export default {
-        data() {
-            return {
-                loginData: {
-                    username: '',
-                    password: '',
-                },
-                submitted: false,
-            };
-        },
-        methods: {
-        submitLogin() {
-            this.submitted = true;
-        },
-    },
+export default defineComponent({
+  data() {
+    return {
+      loginData: {
+        username: '',
+        password: '',
+      },
+      submitted: false,
     };
+  },
+  methods: {
+    submitLogin() {
+      this.submitted = true;
+    },
+  },
+});
 </script>
 
 <template>
@@ -30,7 +30,8 @@ import { RouterLink } from 'vue-router';
 
         <button type="submit">Se connecter</button>
         
-        <RouterLink to="register" class="redirection">Pas encore inscrit? Création d'un compte</RouterLink>
+        <router-link to="/register" class="redirection">Pas encore inscrit? Création d'un compte</router-link>
+
     </form>
 
     <div v-if="submitted">

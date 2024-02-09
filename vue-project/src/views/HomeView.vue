@@ -1,9 +1,11 @@
 <script>
 
+
 </script>
 
 <template>
-<h1>HomeView</h1>
+<h1>Accueil</h1>
+
 </template>
 
 <style scoped>
